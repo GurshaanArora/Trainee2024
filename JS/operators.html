@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic JS Arithmetic</title>
+</head>
+<body>
+    <h1>Basic JavaScript Operators</h1>
+
+    <h2>Arithmetic Operations</h2>
+
+    <label for="num1">Enter first number:</label>
+    <input type="number" id="num1" placeholder="0">
+    <br><br>
+
+    <label for="num2">Enter second number:</label>
+    <input type="number" id="num2" placeholder="0">
+    <br><br>
+
+    <button onclick="performAddition()">Add</button>
+    <button onclick="performSubtraction()">Subtract</button>
+    <button onclick="performMultiplication()">Multiply</button>
+    <button onclick="performDivision()">Divide</button>
+    <br><br>
+
+    <h3>Result: <span id="result">0</span></h3>
+
+    <script>
+        function performAddition() {
+            const num1 = parseFloat(document.getElementById('num1').value) || 0;
+            const num2 = parseFloat(document.getElementById('num2').value) || 0;
+            document.getElementById('result').textContent = num1 + num2;
+        }
+
+        function performSubtraction() {
+            const num1 = parseFloat(document.getElementById('num1').value) || 0;
+            const num2 = parseFloat(document.getElementById('num2').value) || 0;
+            document.getElementById('result').textContent = num1 - num2;
+        }
+
+        function performMultiplication() {
+            const num1 = parseFloat(document.getElementById('num1').value) || 0;
+            const num2 = parseFloat(document.getElementById('num2').value) || 0;
+            document.getElementById('result').textContent = num1 * num2;
+        }
+
+        function performDivision() {
+            const num1 = parseFloat(document.getElementById('num1').value) || 0;
+            const num2 = parseFloat(document.getElementById('num2').value) || 0;
+            if (num2 === 0) {
+                document.getElementById('result').textContent = 'Error: Division by zero';
+            } else {
+                document.getElementById('result').textContent = num1 / num2;
+            }
+        }
+    </script>
+</body>
+</html>
