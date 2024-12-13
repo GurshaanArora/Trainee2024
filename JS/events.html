@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Events</title>
+</head>
+<body>
+    <h1>JavaScript Events</h1>
+
+    <h3>onClick Event</h3>
+    <p>Click on the button to get the current date!</p>
+    <button onclick="getDate()">Date</button>
+
+    <p class="date" style="font-size: 20px; color:red"></p>
+
+    <h3>onMouseOver Event</h3>
+    <p>Hover on the button to change its color</p>
+    <button class="btn" onmouseover="changeColor()">Change Color</button>
+
+    <script>
+        function getDate(){
+            document.querySelector('.date').innerHTML = Date();
+        }
+
+        function changeColor(){
+            document.querySelector('.btn').style.background = 'red';
+            document.querySelector('.btn').style.color = 'white';
+        }
+    </script>
+
+</body>
+</html>
