@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Arrays Example</title>
+</head>
+<body>
+    <h1>JavaScript Arrays Example</h1>
+    <p>This page demonstrates basic use of arrays in JavaScript.</p>
+
+    <button onclick="showArray()">Show Initial Array</button>
+    <button onclick="addElement()">Add Element</button>
+    <button onclick="removeLastElement()">Remove Last Element</button>
+    <button onclick="displayArrayLength()">Show Array Length</button>
+
+    <h3>Output:</h3>
+    <div id="output"></div>
+
+    <script>
+        // Initial Array
+        let myArray = ["HTML", "CSS", "JS"];
+
+        // Function to display the array
+        function showArray() {
+            document.getElementById("output").innerText = "Array: " + myArray.join(", ");
+        }
+
+        // Function to add an element to the array
+        function addElement() {
+            let newItem = prompt("Enter an item to add to the array:");
+            if (newItem) {
+                myArray.push(newItem);
+                showArray();
+            }
+        }
+
+        // Function to remove the last element from the array
+        function removeLastElement() {
+            if (myArray.length > 0) {
+                let removedItem = myArray.pop();
+                document.getElementById("output").innerText = "Removed: " + removedItem + "\nUpdated Array: " + myArray.join(", ");
+            } else {
+                document.getElementById("output").innerText = "The array is already empty.";
+            }
+        }
+
+        // Function to display the length of the array
+        function displayArrayLength() {
+            document.getElementById("output").innerText = "Array Length: " + myArray.length;
+        }
+    </script>
+</body>
+</html>
